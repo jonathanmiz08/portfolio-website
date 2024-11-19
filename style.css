@@ -7,14 +7,20 @@
     font-style: normal;
 }
 
+section {
+    padding: 100px 0;
+}
+
 #hero {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to bottom,#001D3D,#000000);
     position: relative;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 #hero-container {
@@ -29,8 +35,8 @@
 
 nav {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 15px;
+    right: 15px;
 }
 
 nav ul {
@@ -61,7 +67,7 @@ nav ul li:nth-child(4) {background: #ADB5BD; }
 HERO SECTION CONTAINERS AND CONTENT
  */
 #hero-headshot-container {
-    width: 20%;
+    width: 25rem;
     position: relative;
     aspect-ratio: 1/1;
 }
@@ -88,7 +94,8 @@ ul {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3.815rem;/*clamp(3.052rem, 2.5vw, 3.815rem);*/
+
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
@@ -97,7 +104,7 @@ h1 {
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 3.052rem;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
@@ -151,33 +158,40 @@ ABOUT SECTION CONTAINERS AND CONTENT
 }
 
 #about-container {
-    width: 45rem;
+    width: 38.5rem;
+    max-width: 90%;
+
 }
 
 h3 {
     color: white;
-    font-size: 3rem;
+    font-size: 2.441rem;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 25px;
 }
 
 #about-description {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
     color: white;
     font-weight: 400;
-
+    margin-bottom: 40px;
 }
 
 #skill-tools-title {
     color: #FCA311;
     font-size: 2rem;
     font-weight: bold;
+    margin-bottom: 25px;
 }
 
 #skill-tools {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 2rem;
+    padding: 0 2rem;
 }
 
 #logo-wrapper {
@@ -194,6 +208,7 @@ h3 {
     color: white;
     text-align: center;
     font-weight: 400;
+    font-size: clamp(0.5rem,1.5vw,1rem);
 }
 
 /*
@@ -208,6 +223,7 @@ WORK SECTION CONTAINERS AND CONTENT
 
 #work-container {
     width: 45rem;
+    max-width: 90%;
 }
 
 
@@ -300,6 +316,7 @@ CONTACT SECTION CONTAINERS AND CONTENT
 #contact-options {
     display: flex;
     justify-content: center;
+    gap: 2rem;
 }
 
 form {
@@ -320,6 +337,7 @@ input {
     border-radius: 10px;
     background-color: #202020;
     border: 1px solid #2E2E2E;
+    margin-bottom: 1rem;
 }
 
 #message {
@@ -327,14 +345,20 @@ input {
     background-color: #202020;
     border: 1px solid #2E2E2E;
     border-radius: 10px;
+    margin-bottom: 1rem;
 
 }
 
 #contact-links li {
+    margin-top: 2.5rem;
     display: flex;
     align-items: center;
     gap: 10px;
     color: white;
+}
+
+#contact-links li:nth-child(1) {
+    margin-top: 1.5rem;
 }
 
 #contact-links img {
