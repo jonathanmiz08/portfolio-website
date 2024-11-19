@@ -178,7 +178,6 @@ h3 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 1rem;
-
 }
 
 #logo-wrapper {
@@ -196,3 +195,175 @@ h3 {
     text-align: center;
     font-weight: 400;
 }
+
+/*
+WORK SECTION CONTAINERS AND CONTENT
+ */
+
+#work {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+#work-container {
+    width: 45rem;
+}
+
+
+.work-list li {
+    border-left: 2px solid white;
+    padding-left: 20px;
+}
+
+
+.work-company:nth-child(1) {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #FCA311;
+    border-left: none;
+}
+
+
+.work-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+
+}
+
+.work-title:nth-child(2) {
+    border-color: transparent;
+    border-image: linear-gradient(to bottom, transparent 50%, white 50%) 1;
+}
+
+
+
+.work-title::before {
+     content: "";
+     width: 10px;
+     height: 10px;
+     background-color: white;
+     display: inline-block;
+     border-radius: 15px;
+     margin-right: 12px;
+     margin-left: -30px;
+     border: 4px solid white;
+ }
+
+@keyframes pulse {
+    0%, 100% {
+        background-color: red;
+    }
+    50% {
+        background-color: white;
+    }
+
+}
+
+.work-title:nth-child(2)::before {
+    animation: pulse 2s infinite;
+
+}
+
+
+.work-period {
+    font-weight: 600;
+    color: #ADB5BD;
+}
+
+.work-tasks {
+    font-weight: 600;
+    color: #ADB5BD;
+    list-style: disc;
+    display: block;
+    padding-inline-start: 40px;
+}
+
+.work-tasks li {
+    border-left: none;
+}
+
+/*
+CONTACT SECTION CONTAINERS AND CONTENT
+ */
+
+#contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+
+}
+
+#contact-options {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+    width: 400px;
+}
+
+label {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+input {
+    height: 50px;
+    border-radius: 10px;
+    background-color: #202020;
+    border: 1px solid #2E2E2E;
+}
+
+#message {
+    height: 150px;
+    background-color: #202020;
+    border: 1px solid #2E2E2E;
+    border-radius: 10px;
+
+}
+
+#contact-links li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+#contact-links img {
+    height: 50px;
+
+}
+
+#contact-links a {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+#form-button {
+    align-self: start;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: #14213D;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
