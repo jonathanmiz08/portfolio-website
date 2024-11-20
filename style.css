@@ -20,8 +20,9 @@ section {
     background-image: linear-gradient(to bottom,#001D3D,#000000);
     position: relative;
     gap: 2rem;
-    flex-wrap: wrap;
 }
+
+
 
 #hero-container {
     width: 80rem;
@@ -68,8 +69,15 @@ HERO SECTION CONTAINERS AND CONTENT
  */
 #hero-headshot-container {
     width: 25rem;
+    max-width: 90%;
     position: relative;
     aspect-ratio: 1/1;
+}
+
+#hero-summary-container {
+    width: 32rem;
+    max-width: 90%;
+
 }
 
 .heading-line {
@@ -84,17 +92,33 @@ ul {
 
 
 #hero-icons {
-    flex-grow: 1;
-    display: flex;
-    justify-content: space-between;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 0 0 0 10px;
+    gap: 10px;
 }
 
-#hero-icons img {
-    height: 64px;
+
+#hero-icons li {
+    /* Make li fill its grid cell */
+    width: 100%;
+    height: 100%;
+    display: flex;  /* Using flex to center the SVG */
+    align-items: center;
+    justify-content: center;
 }
+
+#hero-icons li img {
+    /* Make SVG responsive */
+    width: 100%;
+    height: auto;
+}
+
+
 
 h1 {
-    font-size: 3.815rem;/*clamp(3.052rem, 2.5vw, 3.815rem);*/
+    font-size: 3.815rem;
 
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -383,6 +407,35 @@ input {
 }
 
 
+@media screen and (max-width: 62rem) {
+    #hero {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 2.98rem;
+    }
+
+    h2 {
+        font-size: 2.384rem;
+    }
+
+    #hero-summary-container {
+        width: 25rem;
+        /*max-height: 40vh;
+
+         */
+    }
+
+    #contact-options {
+        flex-direction: column;
+        /*max-height: 30vh;
+
+         */
+    }
+
+
+}
 
 
 
