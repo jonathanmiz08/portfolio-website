@@ -47,7 +47,7 @@
                 </div>
                 <h2>Full-Stack Web <br>Developer</h2>
                 <div id="hero-buttons">
-                    <button class="hero-button">Contact Me</button>
+                    <a href="#contact" class="hero-button">Contact Me</a>
                     <button class="hero-button">Resume</button>
                 </div>
 
@@ -57,13 +57,19 @@
 
     </section>
     <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-
+        <div id="nav-container">
+            <ul id="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
     </nav>
     <section id="about">
         <div id="about-container">
@@ -149,6 +155,43 @@
                         using Excel and Jira.
                 </li>
             </ul>
+            <img src="circle.svg">
+        </div>
+    </section>
+    <section id="projects">
+        <div id="project-window-container">
+            <div id="tabs">
+                <div id="tab1">
+
+                </div>
+            </div>
+            <div id="window">
+
+                <div id="search-bar-container">
+                    <div class="search-bar-symbols">
+                        <div>&#x2190</div><div>&#10227</div>
+
+                    </div>
+                    <div id="search-bar">
+
+                    </div>
+                    <div class="search-bar-symbols">
+                        <div>&#x2190</div><div>•••</div>
+
+                    </div>
+                </div>
+                <div id="image-wrapper">
+                    <img id="the-image" src="familyroofandsiding.png">
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div id="project-description">
+
         </div>
     </section>
     <section id="contact">
@@ -181,6 +224,6 @@
     </section>
 
 </main>
-
+<script src="app.js"></script>
 </body>
 </html>

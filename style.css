@@ -16,7 +16,7 @@ main {
 }
 
 section {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 #hero {
@@ -46,12 +46,16 @@ section {
 
 nav {
     background-color: black;
+    z-index: 999;
+    top:0;
+    position: sticky;
+
+}
+
+#nav-container {
     width: min(1920px,100%);
     display: flex;
     justify-content: end;
-    position: sticky;
-    z-index: 999;
-    top:0;
 }
 
 nav ul {
@@ -80,6 +84,84 @@ nav ul li:nth-child(4) a {background: #ADB5BD; color:black}
 
 nav ul a {
     text-decoration: none;
+}
+
+
+@media screen and (max-width: 992px) {
+
+
+    #nav-menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -62.5rem;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: black;
+        color: white;
+    }
+
+    #nav-menu.active {
+        background: black;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 999;
+        height: auto;
+        font-size: 1.6rem;
+    }
+
+
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        height: auto;
+        width: auto;
+    }
+
+
+    .nav-toggle .bar {
+        width: 25px;
+        height: 3px;
+        transition: all 0.3s ease-in-out;
+        background: white;
+    }
+
+    #nav-menu li {
+        width: 100%;
+    }
+
+    #nav-menu li a {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+        font-size: 1.875rem;
+    }
+
+
+    .nav-toggle {
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
 }
 
 
@@ -198,6 +280,8 @@ h2 {
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
+
+    text-decoration: none;
 }
 
 .hero-button:nth-child(1) {
@@ -299,11 +383,14 @@ WORK SECTION CONTAINERS AND CONTENT
     background-color: black;
     display: flex;
     justify-content: center;
+    z-index: 1;
 }
 
 #work-container {
     width: 38.5rem;
     max-width: 90%;
+    position: relative;
+    z-index: 3;
 }
 
 
@@ -382,6 +469,127 @@ WORK SECTION CONTAINERS AND CONTENT
     font-size: 1.25rem;
 }
 
+#work-container img {
+    position: absolute;
+    width: 800px;
+    bottom: -50%;
+    left: -75%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#projects {
+    width: 100%;
+    padding: 100px 0;
+    position: relative;
+    z-index: 3;
+}
+
+
+#project-window-container {
+    width: 38.75rem;
+    height: 27.25rem;
+    background-color: #ADB5BD;
+    margin-left: 42%;
+    border-radius: 10px ;
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+
+
+}
+
+#tabs {
+    width: 100%;
+    height: 7%;
+    background-color: #ADB5BD;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: end;
+}
+
+#tab1 {
+    width: 33%;
+    height: 90%;
+    background-color: #003566;
+    margin-left: 20%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+
+#window {
+    background-color: #003566;
+    width: 100%;
+    height: 93%;
+}
+
+
+
+
+
+#search-bar-container {
+    width: 100%;
+    height:8%;
+    display: flex;
+    align-items: center;
+    background-color: #003566;
+
+}
+
+.search-bar-symbols {
+    width: 10%;
+    display: flex;
+    text-align: center;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 20px;
+    color: white;
+}
+
+
+#search-bar {
+    width: 80%;
+    height: 80%;
+    background-color: #001D3D;
+    border-radius: 30px;
+    border: 1px solid #ADB5BD;
+}
+
+#image-wrapper {
+    width: 100%;
+    height: 92%;
+    border: #003566 2px solid;
+    border-radius: 10px;
+    overflow: clip;
+}
+
+#the-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+
+}
+
+
+
+
+#project-description {
+    width: 26.5rem;
+    height: 13.5rem;
+    background-color: #FCA311;
+    margin-left: 38%;
+    position: absolute;
+    top: 75%;
+}
+
+
+
+
+
 
 
 /*
@@ -389,18 +597,25 @@ CONTACT SECTION CONTAINERS AND CONTENT
  */
 
 #contact {
+    margin-top: 15rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: black;
+    z-index: 3;
 
+    /*background-color: black;
+
+     */
 }
+
+
 
 #contact-options {
     display: flex;
     justify-content: center;
     gap: 3%;
+
 }
 
 form {
