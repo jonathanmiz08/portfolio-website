@@ -160,40 +160,96 @@
     </section>
     <section id="projects">
         <div id="project-window-container">
-            <div id="tabs">
-                <div id="tab1">
+            <div id="window-tabs">
+                <div id="tab-logo"></div>
+                <div class="tab">
+                    <div class="selected-tab" id="fhillc-tab">
+                        <div class="tab-name">Family Home Improvement LLC</div>
+                    </div>
+                </div>
+                <div class="tab hidden">
+                    <div class="selected-tab hidden" id="portfolio-tab">
+                        <div class="tab-name">Jonathan Mizhirumbay</div>
+                    </div>
+                </div>
+                <div id="tab-symbols">
+                    <div>&#x2613</div>
+                    <div>&#x2613</div>
+                    <div>&#x2613</div>
+                </div>
+            </div>
+            <div class="window-nav">
+                <div class="nav-symbols">
+                    <div>&#x2190</div><div>&#10227</div>
+
+                </div>
+                <div class="nav-search" style="overflow: hidden; display:flex; align-items: center; justify-content: center;     position: relative; ">
+                    <div class="nav-url" id="fhillc-url" >
+                        www.familyroofandsiding.com
+                    </div>
+                    <div class="nav-url hidden" id="portfolio-url">
+                        www.jonathanmiz.com
+                    </div>
+                </div>
+                <div class="nav-symbols">
+                    <div></div><div>•••</div>
 
                 </div>
             </div>
-            <div id="window">
-
-                <div id="search-bar-container">
-                    <div class="search-bar-symbols">
-                        <div>&#x2190</div><div>&#10227</div>
-
-                    </div>
-                    <div id="search-bar">
-
-                    </div>
-                    <div class="search-bar-symbols">
-                        <div>&#x2190</div><div>•••</div>
-
+            <div id="window-content">
+                <div class="content" id="fhillc-website">
+                    <div class="image-wrapper">
+                        <picture class="image-wrappers">
+                            <source srcset="fam.png" media="(min-width: 430px)">
+                            <img class="the-image" src="familyroofandsiding.com_(1080%204k%20screenshot).png" alt="landing image" loading="lazy" decoding="async"> <!--height=“618” width=“410”-->
+                        </picture>
                     </div>
                 </div>
-                <div id="image-wrapper">
-                    <img id="the-image" src="familyroofandsiding.png">
-
+                <div class="content hidden" id="portfolio-website">
+                    <div class="image-wrapper">
+                        <picture class="image-wrappers">
+                            <source  srcset="fam2.png" media="(min-width: 430px)">
+                            <img class="the-image" src="fam2.png" alt="landing image" loading="lazy" decoding="async"> <!--height=“618” width=“410”-->
+                        </picture>
+                    </div>
                 </div>
-
             </div>
-
-
-
         </div>
-        <div id="project-description">
+        <div id="project-description-container">
+            <div id="description-tab">
+                <div>+</div>
+                <div>•••</div>
+                <div>&#x2613</div>
+            </div>
+            <div id="description-written-container">
+                <div class="description-written">
+                    <div class="project-text">
+                        <span class="project-type">Front-End Project</span><br>
+                        <span class="project-title">Construction Website</span><br>
+                        <span class="project-brief">Website for local home improvement company</span>
+                    </div>
+                    <div class="project-tech">
+                        HTML - CSS - JAVASCRIPT
+                    </div>
+                    <div class="project-links"></div>
 
+                </div>
+                <div class="description-written hidden">
+                    <div class="project-text">
+                        <span class="project-type">Front-End Project</span><br>
+                        <span class="project-title">Portfolio Website</span><br>
+                        <span class="project-brief">Personal Website to display my experience and skill</span>
+
+                    </div>
+                    <div class="project-tech">
+                        HTML - CSS - JAVASCRIPT - FIGMA
+                    </div>
+                    <div class="project-links"></div>
+                </div>
+            </div>
         </div>
     </section>
+
     <section id="contact">
         <h3>Contact Me</h3>
         <div id="contact-options">

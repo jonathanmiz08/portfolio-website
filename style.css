@@ -483,14 +483,16 @@ WORK SECTION CONTAINERS AND CONTENT
     padding: 100px 0;
     position: relative;
     z-index: 3;
+    display: flex;
+    justify-content: center;
 }
 
 
 #project-window-container {
     width: 38.75rem;
-    height: 27.25rem;
+    height: auto;
+    margin-right: -2rem;
     background-color: #ADB5BD;
-    margin-left: 42%;
     border-radius: 10px ;
     display: flex;
     flex-direction: column;
@@ -499,46 +501,158 @@ WORK SECTION CONTAINERS AND CONTENT
 
 }
 
-#tabs {
+#window-tabs {
     width: 100%;
-    height: 7%;
+    height: min(1.9rem, calc(4.6581vw *2));
     background-color: #ADB5BD;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     display: flex;
     align-items: end;
+    position: relative;
+    overflow: visible;
+
 }
 
-#tab1 {
-    width: 33%;
+
+
+#tab-logo {
+    width: min(2rem,16.5%);
+}
+
+.tab {
+    width: min(16.5%,10rem);
     height: 90%;
-    background-color: #003566;
-    margin-left: 20%;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    background-color: #ADB5BD;
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+}
+
+.tab:before {
+    content: "";
+    height: 50%;
+    bottom: 25%;
+    left: 0;
+    width: 0.5px;
+    background: white;
+    position: absolute;
+}
+.tab:after {
+    content: "";
+    height: 50%;
+    bottom: 25%;
+    width: 0.5px;
+    background: white;
+    position: absolute;
+    right: 0;
+}
+
+.tab.hidden {
+    z-index: 1;
 }
 
 
-#window {
+.selected-tab {
+    width: calc(100% + 2px);
+    height: 100%;
     background-color: #003566;
-    width: 100%;
-    height: 93%;
+    position: absolute;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    left: -1px;
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.selected-tab.hidden {
+    background-color: transparent;
+}
+
+.selected-tab:hover.hidden {
+    opacity: 1;
+    background-color: #8295A8;
+    cursor: pointer;
+    text-shadow: 0 0 5px rgba(0, 145, 255, 1);
+
+}
+.tab-name {
+    width: 90%;
+    height: min(0.96rem, calc(2.3535vw * 2));
+    font-size: min(0.8rem, calc(1.96129vw * 2));
+    word-break: break-all;
+    color:white;
+    overflow: hidden;
+}
+
+#tab-symbols {
+    width: min(6rem,17.5%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: auto;
+    gap: 10%;
+    align-self: center;
+    text-align: center;
+    font-size: min(1rem,24px);
 }
 
 
+.content.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nav-url {
+    position: absolute;
+    overflow:hidden;
+
+    color:white;
+    width:97%;
+    height: min(0.96rem, calc(2.3535vw * 2));
+    font-size: min(0.8rem, calc(1.96129vw * 2));
+    word-break: break-all;
+    border-radius: 10px;
+    text-shadow: 0 0 5px rgba(0, 145, 255, 1);
 
 
+}
 
-#search-bar-container {
+.nav-url:hover {
+    cursor: pointer;
+}
+
+.nav-url.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#window-content {
+    background-color: #003566;
     width: 100%;
-    height:8%;
+    height: min(23.3151rem,57.1596vw);
+    position: relative;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.window-nav {
+    width: 100%;
+    height: min(2.18rem,calc(5.34452vw * 2));
     display: flex;
     align-items: center;
     background-color: #003566;
 
 }
 
-.search-bar-symbols {
+.nav-symbols {
     width: 10%;
     display: flex;
     text-align: center;
@@ -550,7 +664,7 @@ WORK SECTION CONTAINERS AND CONTENT
 }
 
 
-#search-bar {
+.nav-search {
     width: 80%;
     height: 80%;
     background-color: #001D3D;
@@ -558,15 +672,20 @@ WORK SECTION CONTAINERS AND CONTENT
     border: 1px solid #ADB5BD;
 }
 
-#image-wrapper {
+.image-wrapper {
     width: 100%;
-    height: 92%;
+    height: 100%;
     border: #003566 2px solid;
     border-radius: 10px;
     overflow: clip;
 }
 
-#the-image {
+.image-wrappers {
+    width: 100%;
+    height: 100%;
+}
+
+.the-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -577,19 +696,127 @@ WORK SECTION CONTAINERS AND CONTENT
 
 
 
-#project-description {
+
+#project-description-container {
     width: 26.5rem;
-    height: 13.5rem;
-    background-color: #FCA311;
-    margin-left: 38%;
+    height: auto    ;
     position: absolute;
+    margin-left: -14.25rem;
     top: 75%;
+    border-radius: 10px;
+    background-color: #333333;
+}
+
+#description-tab {
+    width: 100%;
+    background-color: #E6B905;
+    font-size: min(1.25rem,4.245283vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2%;
+    color: #333333;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#description-tab div:nth-child(1) {
+    margin-right: auto;
+}
+
+
+#description-written-container {
+    width: 100%;
+    position: relative;
+
+}
+
+.description-written {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1px 0;
+    background: #333333;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+}
+
+.description-written.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.project-text {
+    width: min(21.2rem,94%);
+    margin-left: 3%;
+    padding: min(0.5rem, calc(1.69811321vw * 2)) 0;
+
+}
+
+.project-type {
+    font-size: min(0.875rem,calc(2.971698vw *2));
+    color: #E6B905;
+    font-weight: 600;
+}
+
+.project-title {
+    font-size: min(1.5rem,calc(5.09433962vw * 2));
+    color: white;
+    font-weight: 600;
+}
+
+.project-brief {
+    font-size: min(1rem, calc(3.389622642vw * 2));
+    color:white;
+    font-weight: 400;
+
+}
+
+.project-tech {
+    width: min(21.2rem,94%);
+    border-top: lightgray 1px solid;
+    font-size: min(0.875rem,calc(2.971698vw * 2));
+    font-weight: 600;
+    align-items: center;
+    color: white;
+    margin-left: 3%;
+    display: flex;
+    padding: min(0.5rem, calc(1.69811321vw * 2)) 0;
+}
+
+
+
+
+.project-links {
+    width: 100%;
+    height: min(2rem, calc(6.79245283vw * 2));
+    background-color: #2E2E2E;
+    border-top: #ADB5BD 1px solid;
+
 }
 
 
 
 
 
+
+@media screen and (max-width: 42.75rem) {
+    #project-window-container {
+        max-width: 95%;
+        margin: 0;
+    }
+    #project-description-container {
+        max-width: 90%;
+        margin: 0;
+    }
+
+
+}
 
 
 /*
