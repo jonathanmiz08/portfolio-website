@@ -10,7 +10,7 @@
 
 main {
     overflow: clip;
-    background-color: black;
+    background-color: #111111;
 
 
 }
@@ -19,33 +19,9 @@ section {
     padding: 50px 0;
 }
 
-#hero {
-    padding: 0;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(to bottom,#001D3D,#000000);
-
-
-}
-
-
-
-#hero-container {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 32px;
-    flex: 1;
-}
 
 nav {
-    background-color: black;
+    background-color:#111111;
     z-index: 999;
     top:0;
     position: sticky;
@@ -96,23 +72,25 @@ nav ul a {
         margin: 0;
         width: 100%;
         position: absolute;
-        top: -62.5rem;
+        top: -250vh;
         opacity: 0;
         transition: all 0.5s ease;
         height: 50vh;
         z-index: -1;
-        background: black;
+        background: #111111;
         color: white;
     }
 
     #nav-menu.active {
-        background: black;
+        background: #111111;
         top: 100%;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 999;
         height: auto;
-        font-size: 1.6rem;
+        /*font-size: 1.6rem;
+
+         */
     }
 
 
@@ -138,15 +116,19 @@ nav ul a {
 
     #nav-menu li a {
         text-align: center;
-        padding: 2rem;
+        padding: min(2rem,7vh);
         width: 100%;
         display: table;
-        font-size: 1.875rem;
+        font-size: min(1.875rem,7vh);
     }
 
 
     .nav-toggle {
         cursor: pointer;
+    }
+
+    #mobile-menu {
+        margin-right: 15px;
     }
 
     #mobile-menu.is-active .bar:nth-child(2) {
@@ -165,41 +147,46 @@ nav ul a {
 }
 
 
-#arrow {
-    margin-bottom: 50px;
-    color: white;
-}
-#arrow:hover {
-    animation: move 2s infinite ease;
-}
-
-@keyframes move {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(20px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
 
 /*
 HERO SECTION CONTAINERS AND CONTENT
  */
+
+
+#hero {
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom,#001D3D,#111111);
+
+
+}
+
+
+
+#hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 32px;
+    flex: 1;
+    font-size: min(1rem,36px);
+}
+
 #hero-headshot-container {
-    width: 25rem;
-    max-width: 70%;
+    width: min(25em,45%);
+
     position: relative;
     aspect-ratio: 1/1;
 }
 
 #hero-summary-container {
-    width: 32rem;
+    width: min(32em, 45%);
     flex-shrink: 1;
 
 }
@@ -246,7 +233,7 @@ ul {
 
 
 h1 {
-    font-size: 3.815rem;
+    font-size: min(3.815em,calc((3.815/32) * 0.45)*100vw);
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
@@ -257,7 +244,7 @@ h1 {
 }
 
 h2 {
-    font-size: 3.052rem;
+    font-size: min(3.052em,calc((3.052/32) * 0.45)*100vw);
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
@@ -275,13 +262,16 @@ h2 {
     padding: 10px 20px;
     border: none;
     border-radius: 30px;
-    font-size: 1.25rem;
+    font-size: min(1.25em,calc((1.25/32) * 0.45)*100vw);
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
-
     text-decoration: none;
+}
+
+.hero-button:hover {
+    cursor: pointer;
 }
 
 .hero-button:nth-child(1) {
@@ -307,6 +297,79 @@ h2 {
 }
 
 
+#arrow {
+    width: clamp(36px, 2vw ,48px);
+    height: auto;
+    padding-bottom: 10vh;
+}
+
+#arrow img {
+    width: 100%;
+    height: 100%;
+    transform: rotate(180deg);
+}
+
+#arrow:hover {
+    animation: move 2s infinite ease;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+@media screen and (max-width: 540px) {
+    #hero-container {
+        flex-direction: column;
+    }
+
+    h1 {
+
+        font-size: min(2.98em,11.92vw * .9);
+
+
+
+    }
+
+    h2 {
+        font-size: min(2.384em,9.536vw * .9);
+    }
+
+
+    .hero-button {
+        font-size: min(1em,4vw * .9);
+    }
+
+    #hero-headshot-container {
+        width: min(70%,40vh);
+    }
+
+    #hero-summary-container {
+        width: 25em;
+        max-width: 90%;
+    }
+
+    #arrow {
+        width: 24px;
+        padding-bottom: 5vh;
+    }
+
+}
+
+
+
+
 /*
 ABOUT SECTION CONTAINERS AND CONTENT
  */
@@ -314,7 +377,7 @@ ABOUT SECTION CONTAINERS AND CONTENT
 #about {
     word-break: break-word;
 
-    background-color: black;
+    background-color: #111111;
     display: flex;
     justify-content: center;
 }
@@ -351,9 +414,9 @@ h3 {
     height: auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 6%;
-    padding: 0 6%;
-    font-size: min(1rem,2.33vw);
+    grid-gap: 8%;
+    padding: 0 4%;
+    font-size: min(0.92rem,2.12vw);
     color: white;
     text-align: center;
     font-weight: 400;
@@ -380,7 +443,7 @@ WORK SECTION CONTAINERS AND CONTENT
  */
 
 #work {
-    background-color: black;
+    background-color: #111111;
     display: flex;
     justify-content: center;
     z-index: 1;
@@ -485,11 +548,33 @@ WORK SECTION CONTAINERS AND CONTENT
     z-index: 3;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+.toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    text-align: center;
+}
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+}
 
 #project-window-container {
-    width: 38.75rem;
+    width: 52rem;
     height: auto;
     margin-right: -2rem;
     background-color: #ADB5BD;
@@ -503,7 +588,7 @@ WORK SECTION CONTAINERS AND CONTENT
 
 #window-tabs {
     width: 100%;
-    height: min(1.9rem, calc(4.6581vw *2));
+    height: min(2.5rem, calc(4.6581vw * 2));
     background-color: #ADB5BD;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -517,11 +602,11 @@ WORK SECTION CONTAINERS AND CONTENT
 
 
 #tab-logo {
-    width: min(2rem,16.5%);
+    width: min(2.5rem,16.5%);
 }
 
 .tab {
-    width: min(16.5%,10rem);
+    width: 24.75%;
     height: 90%;
     background-color: #ADB5BD;
     position: relative;
@@ -577,13 +662,12 @@ WORK SECTION CONTAINERS AND CONTENT
     opacity: 1;
     background-color: #8295A8;
     cursor: pointer;
-    text-shadow: 0 0 5px rgba(0, 145, 255, 1);
 
 }
 .tab-name {
     width: 90%;
-    height: min(0.96rem, calc(2.3535vw * 2));
-    font-size: min(0.8rem, calc(1.96129vw * 2));
+    height: min(1.296rem, calc(2.3535vw * 2));
+    font-size: min( 1.08rem, calc(1.96129vw * 2));
     word-break: break-all;
     color:white;
     overflow: hidden;
@@ -597,7 +681,7 @@ WORK SECTION CONTAINERS AND CONTENT
     gap: 10%;
     align-self: center;
     text-align: center;
-    font-size: min(1rem,24px);
+    font-size: min(1.5rem,3.06451vw);
 }
 
 
@@ -612,17 +696,18 @@ WORK SECTION CONTAINERS AND CONTENT
 
     color:white;
     width:97%;
-    height: min(0.96rem, calc(2.3535vw * 2));
-    font-size: min(0.8rem, calc(1.96129vw * 2));
+    height: min(1.296rem, calc(2.3535vw * 2));
+    font-size: min( 1.08rem, calc(1.96129vw * 2));
     word-break: break-all;
     border-radius: 10px;
-    text-shadow: 0 0 5px rgba(0, 145, 255, 1);
 
 
 }
 
 .nav-url:hover {
     cursor: pointer;
+    text-decoration: underline;
+
 }
 
 .nav-url.hidden {
@@ -633,7 +718,7 @@ WORK SECTION CONTAINERS AND CONTENT
 #window-content {
     background-color: #003566;
     width: 100%;
-    height: min(23.3151rem,57.1596vw);
+    height: min(31.5rem,57.1596vw);
     position: relative;
 }
 
@@ -645,7 +730,7 @@ WORK SECTION CONTAINERS AND CONTENT
 
 .window-nav {
     width: 100%;
-    height: min(2.18rem,calc(5.34452vw * 2));
+    height: min(2.9rem,calc(5.34452vw * 2));
     display: flex;
     align-items: center;
     background-color: #003566;
@@ -659,7 +744,7 @@ WORK SECTION CONTAINERS AND CONTENT
     height: 100%;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 20px;
+    font-size: min(1.7rem,3.06451vw);
     color: white;
 }
 
@@ -698,10 +783,10 @@ WORK SECTION CONTAINERS AND CONTENT
 
 
 #project-description-container {
-    width: 26.5rem;
+    width: 35.8rem;
     height: auto    ;
     position: absolute;
-    margin-left: -14.25rem;
+    margin-left: -19rem;
     top: 75%;
     border-radius: 10px;
     background-color: #333333;
@@ -710,14 +795,18 @@ WORK SECTION CONTAINERS AND CONTENT
 #description-tab {
     width: 100%;
     background-color: #E6B905;
-    font-size: min(1.25rem,4.245283vw);
+    font-size: min(1.5rem,4.245283vw);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 2%;
     color: #333333;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+#description-tab div {
+    padding: 0 2%;
+
 }
 
 #description-tab div:nth-child(1) {
@@ -752,41 +841,41 @@ WORK SECTION CONTAINERS AND CONTENT
 
 
 .project-text {
-    width: min(21.2rem,94%);
+    width: min(28.6rem,94%);
     margin-left: 3%;
-    padding: min(0.5rem, calc(1.69811321vw * 2)) 0;
+    padding: min(0.7rem, calc(1.69811321vw * 2)) 0;
 
 }
 
 .project-type {
-    font-size: min(0.875rem,calc(2.971698vw *2));
+    font-size: min(1.2rem,calc(2.971698vw *2));
     color: #E6B905;
     font-weight: 600;
 }
 
 .project-title {
-    font-size: min(1.5rem,calc(5.09433962vw * 2));
+    font-size: min(2rem,calc(5.09433962vw * 2));
     color: white;
     font-weight: 600;
 }
 
 .project-brief {
-    font-size: min(1rem, calc(3.389622642vw * 2));
+    font-size: min(1.35rem, calc(3.389622642vw * 2));
     color:white;
     font-weight: 400;
 
 }
 
 .project-tech {
-    width: min(21.2rem,94%);
+    width: min(28.6rem,94%);
     border-top: lightgray 1px solid;
-    font-size: min(0.875rem,calc(2.971698vw * 2));
+    font-size: min(1.2rem,calc(2.971698vw * 2));
     font-weight: 600;
     align-items: center;
     color: white;
     margin-left: 3%;
     display: flex;
-    padding: min(0.5rem, calc(1.69811321vw * 2)) 0;
+    padding: min(0.7rem, calc(1.69811321vw * 2)) 0;
 }
 
 
@@ -794,7 +883,7 @@ WORK SECTION CONTAINERS AND CONTENT
 
 .project-links {
     width: 100%;
-    height: min(2rem, calc(6.79245283vw * 2));
+    height: min(2.7rem, calc(6.79245283vw * 2));
     background-color: #2E2E2E;
     border-top: #ADB5BD 1px solid;
 
@@ -805,7 +894,7 @@ WORK SECTION CONTAINERS AND CONTENT
 
 
 
-@media screen and (max-width: 42.75rem) {
+@media screen and (max-width: 56rem) {
     #project-window-container {
         max-width: 95%;
         margin: 0;
@@ -815,8 +904,15 @@ WORK SECTION CONTAINERS AND CONTENT
         margin: 0;
     }
 
-
 }
+
+
+@media screen and (max-width: 992px) {
+    .nav-url {
+        text-decoration: underline;
+    }
+}
+
 
 
 /*
@@ -872,6 +968,7 @@ input {
     border: 1px solid #2E2E2E;
     border-radius: 10px;
     margin-bottom: 16px;
+    resize: none;
 
 }
 
@@ -913,27 +1010,6 @@ input {
 
 
 @media screen and (max-width: 62rem) {
-    #hero-container {
-        flex-direction: column;
-    }
-
-    h1 {
-
-        font-size: min(2.98rem,11.92vw);
-
-
-
-    }
-
-    h2 {
-        font-size: min(2.384rem,9.536vw);
-    }
-
-
-    .hero-button {
-        font-size: min(1rem,4vw);
-    }
-
 
 
     #contact-options {
@@ -943,11 +1019,6 @@ input {
 
     }
 
-    #hero-summary-container {
-
-        width: 25rem;
-        max-width: 100%;
-    }
 
 }
 
