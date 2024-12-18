@@ -13,29 +13,31 @@
 
 <main>
     <section id="hero">
-
+        <!--Hero Content-->
         <div id="hero-container">
-
             <div id="hero-headshot-container">
-                <svg id="svg1" viewBox="0 0 100 100" preserveAspectRatio="square" width="95%" height="95%">
+                <svg id="headshot-svg" viewBox="0 0 100 100"    preserveAspectRatio="square" width="95%" height="95%">
                     <rect  x="0" y="0" width="100" height="100" fill="#ADB5BD" />
                 </svg>
-                <svg id="svg2" viewBox="0 0 100 100" preserveAspectRatio="square" width="95%" height="95%">
-                    <rect x="0" y="0" width="100" height="100" fill="white" />
-                </svg>
+                <picture id="headshot-picture">
+                    <source class="picture-pos" srcset="Images/headshot.webp" media="(min-width: 430px)">
+                    <img class="picture-pos" src="Images/headshot-m.webp" alt="landing image" loading="eager" decoding="async">
+                </picture>
             </div>
             <div id="hero-summary-container">
                 <div class="heading-line">
                     <h1 id="hero-first-name">Jonathan</h1>
                     <ul id="hero-icons">
                         <li>
-                            <img src="mail-svgrepo-com.svg">
+                            <a href="mailto:jmizhirumbay@outlook.com"><img src="SVGs/mail-svgrepo-com.svg"></a>
                         </li>
                         <li>
-                            <img src="linkedin-icon-2-logo-svgrepo-com.svg">
+                            <a href="https://www.linkedin.com/in/jonathan-mizhirumbay">
+                                <img src="SVGs/linkedin-icon-2-logo-svgrepo-com.svg">
+                            </a>
                         </li>
                         <li>
-                            <img src="github-142-svgrepo-com.svg">
+                            <a href="https://github.com/jonathanmiz08"><img src="SVGs/github-142-svgrepo-com.svg"></a>
                         </li>
                     </ul>
                 </div>
@@ -45,7 +47,7 @@
                     </svg>
                     <h1 id="hero-last-name">Mizhirumbay</h1>
                 </div>
-                <h2>Full-Stack Web <br>Developer</h2>
+                <h2>Aspiring Full-Stack<br>Web Developer</h2>
                 <div id="hero-buttons">
                     <a href="#contact" class="hero-button">Contact Me</a>
                     <button class="hero-button" id="resume-button">Resume</button>
@@ -53,12 +55,13 @@
 
             </div>
         </div>
-        <a href="#about" id="arrow"><img src="web-arrow.svg"> </a>
+        <a href="#about" id="arrow"><img src="SVGs/web-arrow.svg"> </a>
 
     </section>
-    <nav>
+    <nav aria-label="Main navigation">
+        <!--Navigation Content-->
         <div id="nav-container">
-            <ul id="nav-menu">
+            <ul id="nav-menu"  aria-label="Navigation menu" role="menu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -72,58 +75,59 @@
         </div>
     </nav>
     <section id="about">
+        <!--About Content-->
         <div id="about-container">
             <h3>About Me</h3>
             <p id="about-description">
-                Hi! My name is Jonathan, and I am an aspiring Full-Stack Web Developer. I began programming in 2022 while
+                Hi! I'm an aspiring Full-Stack Web Developer. I began programming in 2022 while
                 pursuing a minor in Computer Science at Seton Hall University, where I also earned a BSBA in 2024. My
-                experience includes working at my university's IT Department and my current role on the Desktop Support
-                Team at Wyndham Hotels and Resorts, which has honed my technical skills and passion for problem-solving.
+                experience working at my university's IT Department and on the Desktop Support
+                Team at Wyndham Hotels and Resorts has honed my technical skills and passion for problem-solving.
                 <br></br>
-                I am currently focused on building my web development skills and seeking opportunities in the field. In
+                Currently, I am focused on building my web development skills and seeking opportunities in the field. In
                 Spring 2025, I will begin pursuing a Master's in Computer Science through Georgia Tech’s OMSCS Program
                 part-time to deepen my expertise and advance my career in software development.
             </p>
-            <div id="skill-tools-title">Skills / Tools:</div>
+            <div id="skill-tools-title">Current Tools:</div>
             <div id="skill-tools">
                 <div class="logo-wrapper">
-                    <img src="javascript-logo-svgrepo-com.svg">
+                    <img src="SVGs/javascript-logo-svgrepo-com.svg">
                     <div>JavaScript</div>
                 </div>
                 <div class="logo-wrapper">
-                    <img src="css-3.svg">
+                    <img src="SVGs/css-3.svg">
                     <div>CSS</div>
                 </div>
                 <div class="logo-wrapper">
-                    <img src="html-1.svg">
+                    <img src="SVGs/html-1.svg">
                     <div>HTML</div>
                 </div>
                 <div class="logo-wrapper">
-                    <img src="python-svgrepo-com.svg">
+                    <img src="SVGs/python-svgrepo-com.svg">
                     <div>Python</div>
                 </div>
                 <div class="logo-wrapper">
-                    <img src="java-svgrepo-com.svg">
+                    <img src="SVGs/java-svgrepo-com.svg">
                     <div>Java</div>
                 </div>
                 <div class="logo-wrapper">
-                    <img src="Git-Icon-1788C.svg">
+                    <img src="SVGs/Git-Icon-1788C.svg">
                     <div>Git</div>
                 </div>
                 <div class="logo-wrapper">
-                    <img src="github-color-svgrepo-com.svg">
+                    <img src="SVGs/github-color-svgrepo-com.svg">
                     <div>Github</div>
                 </div>
                 <div class="logo-wrapper">
-                    <img src="figma-svgrepo-com.svg">
+                    <img src="SVGs/figma-svgrepo-com.svg">
                     <div>Figma</div>
                 </div>
                 <div class="logo-wrapper">
-                    <img src="microsoft-windows-22-logo-svgrepo-com.svg">
+                    <img src="SVGs/microsoft-windows-22-logo-svgrepo-com.svg">
                     <div>Windows</div>
                 </div>
                 <div class="logo-wrapper">
-                    <img src="Tux.svg">
+                    <img src="SVGs/Tux.svg">
                     <div>Linux</div>
                 </div>
 
@@ -131,12 +135,13 @@
         </div>
     </section>
     <section id="work">
+        <!--Work Section-->
         <div id="work-container">
             <h3>Work</h3>
             <ul class="work-list">
                 <li class="work-company">Wyndham Hotel & Resorts</li>
                 <li class="work-title">IT Desktop Support Intern</li>
-                <li class="work-period">June 2023 - Present</li>
+                <li class="work-period">June 2023 - December 2024</li>
                 <li class="work-tasks">
                         Resolved hardware and software tickets for onsite and remote users, addressing Level 1 and Level
                         2 support tasks. Streamlined onboarding by configuring devices and managing user profiles and
@@ -150,34 +155,34 @@
                 <li class="work-tasks">
                         Collaborated with colleagues on data migration projects from Snow to Jira. Assisted the office
                         manager with tasks such as reassigning laptops to students and faculty, managing emails,
-                        organizing files and databases, and handling IT tickets in Jira. Conducted site visits to other
+                        organizing files and databases, and handling IT tickets in Jira. Participated in site visits to other
                         department locations to understand operations and ensure accurate inventory of 1,000+ devices
                         using Excel and Jira.
                 </li>
             </ul>
-            <img src="circle.svg">
         </div>
     </section>
     <section id="projects">
+        <!--Project Section-->
         <h3>Projects</h3>
-        <div id="toast" class="toast">Copied to clipboard!</div>
+        <div id="toast">Copied to clipboard!</div>
         <div id="project-window-container">
             <div id="window-tabs">
                 <div id="tab-logo"></div>
                 <div class="tab">
-                    <div class="selected-tab" id="fhillc-tab">
+                    <div class="selected-tab">
                         <div class="tab-name">Family Home Improvement LLC</div>
                     </div>
                 </div>
                 <div class="tab hidden">
-                    <div class="selected-tab hidden" id="portfolio-tab">
+                    <div class="selected-tab hidden">
                         <div class="tab-name">Jonathan Mizhirumbay</div>
                     </div>
                 </div>
                 <div id="tab-symbols">
                     <div>—</div>
                     <div>&#x2750</div>
-                    <div>✖</div>
+                    <div>X</div>
                 </div>
             </div>
             <div class="window-nav">
@@ -185,11 +190,12 @@
                     <div>&#x2190</div><div>&#10227</div>
 
                 </div>
-                <div class="nav-search" style="overflow: hidden; display:flex; align-items: center; justify-content: center;     position: relative; ">
-                    <div class="nav-url" id="fhillc-url" >
+                <div class="nav-search" style="overflow: hidden; display:flex; align-items: center;
+                justify-content: center;     position: relative; ">
+                    <div class="nav-url">
                         www.familyroofandsiding.com
                     </div>
-                    <div class="nav-url hidden" id="portfolio-url">
+                    <div class="nav-url hidden">
                         www.jonathanmiz.com
                     </div>
                 </div>
@@ -199,60 +205,62 @@
                 </div>
             </div>
             <div id="window-content">
-                <div class="content" id="fhillc-website">
-                    <div class="image-wrapper">
-                        <picture class="image-wrappers">
-                            <source srcset="fam.png" media="(min-width: 430px)">
-                            <img class="the-image" src="familyroofandsiding.com_(1080%204k%20screenshot).png" alt="landing image" loading="lazy" decoding="async"> <!--height=“618” width=“410”-->
-                        </picture>
-                    </div>
-                </div>
-                <div class="content hidden" id="portfolio-website">
-                    <div class="image-wrapper">
-                        <picture class="image-wrappers">
-                            <source  srcset="fam2.png" media="(min-width: 430px)">
-                            <img class="the-image" src="fam2.png" alt="landing image" loading="lazy" decoding="async"> <!--height=“618” width=“410”-->
-                        </picture>
-                    </div>
-                </div>
+                <picture class="content">
+                    <source srcset="Images/fhillc-ss.webp" media="(min-width: 430px)">
+                    <img class="content-ss" src="Images/fhillc-ss-m.webp" alt="landing image" loading="lazy"
+                         decoding="async">
+                </picture>
+
+                <picture class="content hidden">
+                    <source  srcset="Images/portfolio-ss.webp" media="(min-width: 430px)">
+                    <img class="content-ss" src="Images/portfolio-ss-m.webp" alt="landing image" loading="lazy"
+                         decoding="async">
+                </picture>
             </div>
         </div>
         <div id="project-description-container">
             <div id="description-tab">
                 <div>+</div>
                 <div>•••</div>
-                <div>✖</div>
+                <div>X</div>
             </div>
             <div id="description-written-container">
                 <div class="description-written">
                     <div class="project-text">
                         <span class="project-type">Front-End Project</span><br>
-                        <span class="project-title">Construction Website</span><br>
-                        <span class="project-brief">Website for local home improvement company</span>
+                        <span class="project-title">Roofing Website</span><br>
+                        <span class="project-brief">Site for local home improvement company offering roofing and
+                        exterior services</span>
                     </div>
                     <div class="project-tech">
                         HTML - CSS - JAVASCRIPT
                     </div>
-                    <div class="project-links"></div>
+                    <div class="project-links">
+                        <a href="https://github.com/jonathanmiz08/fhillc-website"><img src="SVGs/github-mark-white.svg"></a>
+                        <a href="https://familyroofandsiding.com/"><img src="SVGs/external-link.svg"></a>
+                    </div>
 
                 </div>
                 <div class="description-written hidden">
                     <div class="project-text">
                         <span class="project-type">Front-End Project</span><br>
                         <span class="project-title">Portfolio Website</span><br>
-                        <span class="project-brief">Personal Website to display my experience and skill</span>
+                        <span class="project-brief">Site showcasing my experience, skills, and goals.</span>
 
                     </div>
                     <div class="project-tech">
                         HTML - CSS - JAVASCRIPT - FIGMA
                     </div>
-                    <div class="project-links"></div>
+                    <div class="project-links">
+                        <a href="https://github.com/jonathanmiz08/portfolio-website"><img src="SVGs/github-mark-white.svg"></a>
+                        <a href=""><img src="SVGs/external-link.svg"></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
     <section id="contact">
+        <!--Contact Content-->
         <h3>Contact Me</h3>
         <div id="contact-options">
             <form action="https://api.web3forms.com/submit" method="POST" role="form" aria-label="Contact Form">
@@ -263,26 +271,33 @@
                 <input id="email" name="email" type="email" required>
                 <label for="message">Your Message:</label>
                 <textarea id="message" name="message" required></textarea>
+                <!-- Honeypot Spam Protection -->
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                 <button id="form-button">Submit</button>
             </form>
             <ul id="contact-links">
                 <li>
-                   <img src="mail-svgrepo-com.svg">
-                    <a>jmizhirumbay@outlook.com</a>
+                   <img src="SVGs/mail-svgrepo-com.svg">
+                    <a href="mailto:jmizhirumbay@outlook.com">jmizhirumbay@outlook.com</a>
                 </li>
                 <li>
-                    <img src="linkedin-icon-2-logo-svgrepo-com.svg">
-                    <a>/in/jonathan-mizhirumbay</a>
+                    <img src="SVGs/linkedin-icon-2-logo-svgrepo-com.svg">
+                    <a href="https://www.linkedin.com/in/jonathan-mizhirumbay">/in/jonathan-mizhirumbay</a>
                 </li>
                 <li>
-                    <img src="github-142-svgrepo-com.svg">
-                    <a>jonathanmiz08</a>
+                    <img src="SVGs/github-142-svgrepo-com.svg">
+                    <a href="https://github.com/jonathanmiz08">jonathanmiz08</a>
                 </li>
             </ul>
         </div>
     </section>
+    <footer>
+        <small>
+            © 2024 Jonathan Mizhirumbay
+        </small>
+        <a href="#hero" id="footer-arrow"><img src="SVGs/web-arrow.svg"> </a>
 
+    </footer>
 </main>
 <script src="app.js"></script>
 </body>
