@@ -43,64 +43,18 @@ HERO SECTION CONTAINERS AND CONTENT
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom,#001D3D,#111111);
+    background-image: linear-gradient(to bottom,#001D3D,#000000);
 
 
 }
+
 
 #hero-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 32px;
-    /*flex: 1;
-
-     */
-}
-
-#hero-headshot-container {
-    width: 25em;
+    width: 29em;
     max-width: 85%;
-    position: relative;
-    aspect-ratio: 1/1;
+    line-height: 1.2;
 }
 
-#headshot-svg {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-#headshot-picture {
-    width: 95%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    aspect-ratio: 1/1;
-}
-
-.picture-pos {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position:center 25%;
-}
-
-#hero-summary-container {
-    width: 32em;
-    max-width: 85%;
-    flex-shrink: 1;
-
-}
-
-.heading-line {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    line-height: 1;
-}
 
 ul {
     list-style-type: none;
@@ -109,25 +63,24 @@ ul {
 
 
 #hero-icons {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    padding: 0 0 0 10px;
-    gap: 10px;
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
 }
 
 
 #hero-icons li {
-    /* Make li fill its grid cell */
-    width: 100%;
-    height: 100%;
+
     display: flex;  /* Using flex to center the SVG */
     align-items: center;
     justify-content: center;
 }
 #hero-icons li a {
-    width: 100%;
-    height: auto;
+    width: 40px;
+    height: 40px;
 }
 
 #hero-icons li a img {
@@ -150,8 +103,6 @@ h1 {
     font-weight: bold;
     font-style: normal;
     color: white;
-    flex-shrink: 1;
-    padding: 0;
 }
 
 h2 {
@@ -172,7 +123,7 @@ h2 {
 .hero-button {
     padding: 10px 20px;
     border: none;
-    border-radius: 30px;
+    border-radius: 5px;
     font-size: 1.25em;/*min(1.25em,calc((1.25/32) * 0.45)*100vw);*/
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -208,7 +159,6 @@ h2 {
     width: 48px;
     height: auto;
     margin-top: 10vh;
-
 }
 
 #arrow img {
@@ -277,13 +227,16 @@ NAVIGATION SECTION
  */
 
 nav {
-    background-color: #111111;
+    background-color: #000000;
     z-index: 999;
     top:0;
     position: sticky;
     width: 100%;
+    height: 55px;
     display: flex;
     justify-content: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 
 }
 
@@ -291,28 +244,30 @@ nav {
     width: min(1320px,100%);
     display: flex;
     justify-content: end;
+    align-items: center;
 }
 
 nav ul {
     display: flex;
     margin-right: 15px;
+    gap: 4px;
 }
+
+
 
 nav ul li a {
     list-style: none;
-    width: 130px;
-    height: 25px;
+    width: 125px;
+    height: 50px;
     display: flex;
-    justify-content: start;
-    align-items: end;
-    font-size: 18px;
-    font-family: "Montserrat", sans-serif;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
     font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
+    font-weight: 700;
 
 }
-nav ul li:nth-child(1) a {background: black; color:white;}
+nav ul li:nth-child(1) a {background: #111111; color:white;}
 nav ul li:nth-child(2) a {background: #14213D; color:white}
 nav ul li:nth-child(3) a {background: #FCA311; color:black}
 nav ul li:nth-child(4) a {background: #ADB5BD; color:black}
@@ -414,12 +369,37 @@ ABOUT SECTION CONTAINERS AND CONTENT
     word-break: break-word;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 #about-container {
-    width: min(85%,38.5em);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 47px;
+    align-items: center;
+    justify-content: center;
+
 }
+
+#about-container div {
+    width: min(85%,31.25rem);
+}
+
+
+#headshot-picture {
+    width: min(85%, 25rem);
+    height: 25rem;
+
+    aspect-ratio: 1/1;
+}
+
+.picture-pos {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 h3 {
     color: white;
@@ -430,7 +410,7 @@ h3 {
 }
 
 #about-description {
-    font-size: 1.25em;
+    font-size: 1.125em;
     line-height: 1.5;
     color: white;
     font-weight: 400;
@@ -439,35 +419,34 @@ h3 {
 
 #skill-tools-title {
     color: #FCA311;
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 25px;
 }
 
 #skill-tools {
-    width: 100%;
+    width: 23.5rem;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 8%;
-    padding: 0 4%;
-    font-size: min(1em,2.1vw);
+    grid-template-columns: repeat(auto-fill,minmax(min(7rem,90%), 1fr));
+    row-gap: 10px;
+    font-size: min(0.875rem,2.1vw);
     color: white;
     text-align: center;
     font-weight: 400;
 }
 
-#logo-wrapper {
+.logo-wrapper {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: left;
+    text-align: left;
+    gap: 10px;
 }
 
 
 .logo-wrapper img {
-    width: 100%;
+    width: 40px;
     height: auto;
 }
 
@@ -493,6 +472,7 @@ WORK SECTION CONTAINERS AND CONTENT
 #work {
     display: flex;
     justify-content: center;
+    scroll-margin-top: 55px;
 }
 
 #work-container {
@@ -614,6 +594,8 @@ PROJECT SECTION CONTAINERS AND CONTENT
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    scroll-margin-top: 55px;
+
 }
 
 #toast {
@@ -988,6 +970,8 @@ CONTACT SECTION CONTAINERS AND CONTENT
     display: flex;
     flex-direction: column;
     justify-content: center;
+    scroll-margin-top: 55px;
+
 }
 
 
