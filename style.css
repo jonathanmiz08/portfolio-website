@@ -50,7 +50,7 @@ HERO SECTION CONTAINERS AND CONTENT
 
 
 #hero-container {
-    width: 29em;
+    width: 29rem;
     max-width: 85%;
     line-height: 1.2;
 }
@@ -97,7 +97,7 @@ ul {
 
 
 h1 {
-    font-size: 3.815em; /*min(3.815em,calc((3.815/32) * 0.45)*100vw);*/
+    font-size: 3.815em;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
@@ -106,7 +106,7 @@ h1 {
 }
 
 h2 {
-    font-size: 3.052em; /*min(3.052em,calc((3.052/32) * 0.45)*100vw);*/
+    font-size: 3.052em;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
@@ -124,7 +124,7 @@ h2 {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 1.25em;/*min(1.25em,calc((1.25/32) * 0.45)*100vw);*/
+    font-size: 1.25rem;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
@@ -199,20 +199,18 @@ h2 {
     Why: To ensure the lines don't break or overflow and maintain design.
      */
     h1 {
-        font-size: min(2.98em,calc((3.815/32) * 85vw));
+        font-size: 2.98rem;
     }
 
     h2 {
-        font-size: min(2.384em,calc((3.052/32) * 85vw));
+        font-size: 2.384rem;
     }
 
     .hero-button {
-        font-size: min(1em,4vw * .85);
+        font-size: 1rem;
     }
 
-    #hero-summary-container {
-        width: 25em;
-    }
+
 
     #arrow {
         width: 38px;
@@ -371,6 +369,8 @@ ABOUT SECTION CONTAINERS AND CONTENT
     display: flex;
     flex-direction: column;
     align-items: center;
+    scroll-margin-top: 55px;
+
 }
 
 #about-container {
@@ -403,14 +403,14 @@ ABOUT SECTION CONTAINERS AND CONTENT
 
 h3 {
     color: white;
-    font-size: 2.441em;
+    font-size: 2.441rem;
     font-weight: bold;
     text-align: center;
     margin-bottom: 25px;
 }
 
 #about-description {
-    font-size: 1.125em;
+    font-size: 1.125rem;
     line-height: 1.5;
     color: white;
     font-weight: 400;
@@ -425,12 +425,13 @@ h3 {
 }
 
 #skill-tools {
-    width: 23.5rem;
+    max-width: 100%;
+    width: 31.25rem;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(min(7rem,90%), 1fr));
+    grid-template-columns: repeat(auto-fill,minmax(7rem, 1fr));
     row-gap: 10px;
-    font-size: min(0.875rem,2.1vw);
+    font-size: 0.875rem;
     color: white;
     text-align: center;
     font-weight: 400;
@@ -452,15 +453,15 @@ h3 {
 
 @media screen and (max-width: 430px) {
     h3 {
-        font-size: 1.953em;
+        font-size: 1.953rem;
     }
 
     #about-description {
-        font-size: 1.125em;
+        font-size: 1.125rem;
     }
 
     #skill-tools-title {
-        font-size: 1.8em;
+        font-size: 1.8rem;
     }
 }
 
