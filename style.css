@@ -477,7 +477,7 @@ WORK SECTION CONTAINERS AND CONTENT
 }
 
 #work-container {
-    width: min(38.5em, 85%);
+    width: min(38.5rem, 85%);
 }
 
 
@@ -488,43 +488,55 @@ WORK SECTION CONTAINERS AND CONTENT
 }
 
 .work-company {
-    font-size: 1.25em;
+    font-size: 1.25rem;
     font-weight: 600;
     color: #FCA311;
 }
 
-.work-company:nth-child(1) {
-    border-left: none;
-}
 
 
 .work-title {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 600;
     color: white;
 
 }
 
-.work-title:nth-child(2) {
-    border-color: transparent;
-    border-image: linear-gradient(to bottom, transparent 41%, white 59%) 1;
+.work-title::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    display: inline-block;
+    border-radius: 15px;
+    margin-right: 12px;
+    margin-left: -30px;
+    border: 4px solid white;
+}
+.work-period {
+    font-weight: 600;
+    color: #006aca;
+}
+
+.work-tasks {
+    font-weight: 400;
+    color: #ADB5BD;
+    line-height: 1.5;
+    font-size: 1.25rem;
+}
+
+.work-tasks:nth-child(7) {
+    padding-bottom: 40px;
 }
 
 
+#current-company {
+    border-left: none;
+}
+#current-role {
+    border-image: linear-gradient(to bottom, transparent 41%, white 59%) 1;
+}
 
-.work-title::before {
-     content: "";
-     width: 10px;
-     height: 10px;
-     background-color: white;
-     display: inline-block;
-     border-radius: 15px;
-     margin-right: 12px;
-     margin-left: -30px;
-     border: 4px solid white;
- }
-
-/*
 @keyframes pulse {
     0%, 100% {
         background-color: red;
@@ -535,47 +547,32 @@ WORK SECTION CONTAINERS AND CONTENT
 
 }
 
- */
 
-.work-title:nth-child(2)::before {
+
+#current-role::before {
     animation: pulse 2s infinite;
 
 }
 
-.work-tasks:nth-child(4) {
-    padding-bottom: 40px;
-}
-
-.work-period {
-    font-weight: 600;
-    color: #006aca;
-}
-
-.work-tasks {
-    font-weight: 400;
-    color: #ADB5BD;
-    line-height: 1.5;
-    font-size: 1.25em;
-}
 
 @media screen and (max-width: 430px) {
     .work-company {
-        font-size: 1.125em;
+        font-size: 1.125rem;
 
     }
 
     .work-title {
-        font-size: 1.35em;
+        font-size: 1.35rem;
 
 
     }
 
     .work-period {
-        font-size: 0.9em;
+        font-size: 0.9rem;
     }
     .work-tasks {
 
-        font-size: 1.125em;
+        font-size: 1.125rem;
     }
 }
 
