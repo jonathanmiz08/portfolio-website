@@ -572,7 +572,7 @@ WORK SECTION CONTAINERS AND CONTENT
     }
     .work-tasks {
 
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
 }
 
@@ -866,6 +866,7 @@ PROJECT SECTION CONTAINERS AND CONTENT
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     overflow: hidden;
+    line-height: 1.125;
 }
 
 .description-written.hidden {
@@ -875,46 +876,46 @@ PROJECT SECTION CONTAINERS AND CONTENT
 
 
 .project-text {
-    width: min(28.6em,94%);
+    width: min(28.6em,80%);
     margin-left: 3%;
-    padding: min(0.7em, calc(1.69811321vw * 1.5)) 0;
+    padding: min(0.7em, calc(1.69811321vw * 1.275)) 0;
 
 }
 
 .project-type {
-    font-size: min(1.2em,calc(2.971698vw * 1.5));
+    font-size: min(1.2em,calc(2.971698vw * 1.275));
     color: #E6B905;
     font-weight: 600;
 }
 
 .project-title {
-    font-size: min(2em,calc(5.09433962vw * 1.5));
+    font-size: min(2em,calc(5.09433962vw * 1.275));
     color: white;
     font-weight: 600;
 }
 
 .project-brief {
-    font-size: min(1.35em, calc(3.389622642vw * 1.5));
+    font-size: min(1.35em, calc(3.389622642vw * 1.275));
     color:white;
     font-weight: 400;
 
 }
 
 .project-tech {
-    width: min(28.6em,94%);
+    width: min(28.6em,80%);
     border-top: lightgray 1px solid;
-    font-size: min(1.2em,calc(2.971698vw * 1.5));
+    font-size: min(1.2em,calc(2.971698vw * 1.275));
     font-weight: 600;
     align-items: center;
     color: white;
     margin-left: 3%;
     display: flex;
-    padding: min(0.7em, calc(1.69811321vw * 1.5)) 0;
+    padding: min(0.7em, calc(1.69811321vw * 1.275)) 0;
 }
 
 .project-links {
     width: 100%;
-    height: min(2.7em, calc(6.79245283vw * 1.5));
+    height: min(2.7em, calc(6.79245283vw * 1.275));
     border-top: #414141 1px solid;
     display: flex;
     justify-content: start;
@@ -947,8 +948,14 @@ PROJECT SECTION CONTAINERS AND CONTENT
         margin: 0;
     }
     #project-description-container {
-        max-width: 90%;
+        max-width: 77%;
         margin: 0;
+    }
+
+    .description-written {
+
+        line-height: 1.125;
+
     }
 }
 
