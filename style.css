@@ -389,7 +389,6 @@ ABOUT SECTION CONTAINERS AND CONTENT
 
 #headshot-picture {
     width: min(85%, 25rem);
-    height: 25rem;
 
     aspect-ratio: 1/1;
 }
@@ -457,7 +456,7 @@ h3 {
     }
 
     #about-description {
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
 
     #skill-tools-title {
@@ -522,7 +521,7 @@ WORK SECTION CONTAINERS AND CONTENT
     font-weight: 400;
     color: #ADB5BD;
     line-height: 1.5;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
 }
 
 .work-tasks:nth-child(7) {
@@ -829,7 +828,7 @@ PROJECT SECTION CONTAINERS AND CONTENT
 #description-tab {
     width: 100%;
     background-color: #E6B905;
-    font-size: min(1.5em,4.245283vw);
+    font-size: 1.5rem; /*min(1.5em,4.245283vw);*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -866,7 +865,7 @@ PROJECT SECTION CONTAINERS AND CONTENT
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     overflow: hidden;
-    line-height: 1.125;
+    font-size: 1rem;
 }
 
 .description-written.hidden {
@@ -878,24 +877,25 @@ PROJECT SECTION CONTAINERS AND CONTENT
 .project-text {
     width: min(28.6em,80%);
     margin-left: 3%;
-    padding: min(0.7em, calc(1.69811321vw * 1.275)) 0;
+    padding: 0.7em 0;/*min(0.7em, calc(1.69811321vw * 1.275)) 0;*/
+    font-size: 1em;
 
 }
 
 .project-type {
-    font-size: min(1.2em,calc(2.971698vw * 1.275));
+    font-size: 1.2em;/*min(1.2em,calc(2.971698vw * 1.275));*/
     color: #E6B905;
     font-weight: 600;
 }
 
 .project-title {
-    font-size: min(2em,calc(5.09433962vw * 1.275));
+    font-size: 2em;/*min(2em,calc(5.09433962vw * 1.275));*/
     color: white;
     font-weight: 600;
 }
 
 .project-brief {
-    font-size: min(1.35em, calc(3.389622642vw * 1.275));
+    font-size: 1.35em;/*min(1.35em, calc(3.389622642vw * 1.275));*/
     color:white;
     font-weight: 400;
 
@@ -904,18 +904,18 @@ PROJECT SECTION CONTAINERS AND CONTENT
 .project-tech {
     width: min(28.6em,80%);
     border-top: lightgray 1px solid;
-    font-size: min(1.2em,calc(2.971698vw * 1.275));
+    font-size: 1.2em;/*min(1.2em,calc(2.971698vw * 1.275));*/
     font-weight: 600;
     align-items: center;
     color: white;
     margin-left: 3%;
     display: flex;
-    padding: min(0.7em, calc(1.69811321vw * 1.275)) 0;
+    padding: 0.7em 0;/*min(0.7em, calc(1.69811321vw * 1.275)) 0;*/
 }
 
 .project-links {
     width: 100%;
-    height: min(2.7em, calc(6.79245283vw * 1.275));
+    height: 2.7em;/*min(2.7em, calc(6.79245283vw * 1.275));*/
     border-top: #414141 1px solid;
     display: flex;
     justify-content: start;
@@ -953,10 +953,11 @@ PROJECT SECTION CONTAINERS AND CONTENT
     }
 
     .description-written {
-
+        font-size: 0.8rem;
         line-height: 1.125;
 
     }
+
 }
 
 @media screen and (max-width: 992px) {
